@@ -319,14 +319,17 @@ body {
 
 
 /* =========================================
-   10. DISEÑO RESPONSIVE - TABLETS Y MÓVILES
+   10. DISEÑO RESPONSIVE
+   Solo ajusta textos, campos y botones.
+   Las imágenes de fondo no se modifican.
 ========================================= */
 
-/* Tablets y pantallas medianas */
+/* TABLETS Y PANTALLAS MEDIANAS */
 @media screen and (max-width: 768px) {
 
   .consulta {
-    padding: 160px 20px 10px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .consulta .contenido {
@@ -337,42 +340,35 @@ body {
   #nombreInput {
     width: 100%;
     max-width: 360px;
-    box-sizing: border-box;
     padding: 10px 12px;
+    box-sizing: border-box;
   }
 
   .confirmar-asistencia {
-    padding: 10px 20px;
-  }
-
-  .opciones-asistencia {
-    gap: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   #mensajeAsistencia {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    box-sizing: border-box;
   }
 }
 
 
-/* =========================================
-   11. MÓVILES PEQUEÑOS
-========================================= */
-
+/* CELULARES */
 @media screen and (max-width: 480px) {
 
-  .consulta {
-    padding: 130px 16px 10px;
-  }
-
+  /* Títulos decorativos */
   .consulta h2,
   .confirmar-asistencia h2 {
-    font-size: 32px;
+    font-size: clamp(27px, 7.5vw, 34px);
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
+  /* Textos informativos */
   .consulta .texto,
   .confirmar-asistencia > p,
   .fecha-confirmacion {
@@ -380,6 +376,11 @@ body {
     line-height: 1.6;
   }
 
+  .consulta .texto {
+    overflow-wrap: break-word;
+  }
+
+  /* Campo del nombre */
   #nombreInput {
     width: 100%;
     max-width: 340px;
@@ -388,86 +389,74 @@ body {
     box-sizing: border-box;
   }
 
+  /* Resultado de los pases */
   .resultado {
     font-size: 11px;
     line-height: 1.5;
     overflow-wrap: anywhere;
   }
 
-  .confirmar-asistencia {
-    padding: 10px 14px;
-  }
-
+  /* Botones de asistencia */
   .opciones-asistencia {
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 18px;
   }
 
-  .btn-asistencia {
-    max-width: 100%;
-    padding: 8px 12px;
-    font-size: 10px;
-  }
-
+  .btn-asistencia,
   .btn-asistencia[data-respuesta="Sí asistiré"],
   .btn-asistencia[data-respuesta="No podré asistir"] {
-    padding-right: 12px;
-    padding-left: 12px;
+    padding: 8px 10px;
+    font-size: 9px;
   }
 
-  .fecha-confirmacion {
-    margin-top: 20px;
-  }
-
+  /* Mensaje para los novios */
   #mensajeAsistencia {
     width: 100%;
-    max-width: 340px;
-    min-height: 60px;
-    box-sizing: border-box;
+    max-width: 300px;
+    height: 60px;
     padding: 10px 12px;
     font-size: 12px;
+    box-sizing: border-box;
   }
 
+  /* Botón de envío */
   #botonEnviarAsistencia {
     padding: 8px 18px;
     font-size: 11px;
   }
 
+  /* Estado de la confirmación */
   #estadoEnvio {
     padding: 0 8px;
-    margin-bottom: 30px;
+    font-size: 10px;
     overflow-wrap: anywhere;
   }
 }
 
 
-/* =========================================
-   12. MÓVILES MUY ESTRECHOS
-========================================= */
-
+/* CELULARES MUY PEQUEÑOS */
 @media screen and (max-width: 360px) {
-
-  .consulta {
-    padding-right: 12px;
-    padding-left: 12px;
-  }
 
   .consulta h2,
   .confirmar-asistencia h2 {
-    font-size: 28px;
+    font-size: 27px;
   }
 
-  .confirmar-asistencia {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .opciones-asistencia {
-    gap: 8px;
-  }
-
-  .btn-asistencia {
+  .consulta .texto,
+  .confirmar-asistencia > p,
+  .fecha-confirmacion {
     font-size: 9px;
-    padding: 7px 9px;
+  }
+
+  .btn-asistencia,
+  .btn-asistencia[data-respuesta="Sí asistiré"],
+  .btn-asistencia[data-respuesta="No podré asistir"] {
+    padding: 7px 8px;
+    font-size: 8px;
+  }
+
+  #mensajeAsistencia {
+    max-width: 280px;
   }
 }
+
