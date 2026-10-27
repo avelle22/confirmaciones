@@ -1,15 +1,7 @@
-
 /* =========================================
    1. FUENTES
 ========================================= */
-
-@font-face {
-  font-family: 'Juana';
-  src: url('juana.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* Tipografía Hatton */
 @font-face {
   font-family: 'Hatton';
   src: url('../fonts/hatton-regular.ttf') format('truetype');
@@ -18,7 +10,6 @@
 }
 
 /* Tipografía general */
-
 p,
 .btn-enviar,
 .btn-no,
@@ -29,13 +20,12 @@ p,
 .contador,
 .confirmar-asistencia,
 .consulta {
-  font-family: 'Juana', serif;
+  font-family: 'Prata', serif;
   letter-spacing: 0;
   line-height: 1.4;
 }
 
 /* Títulos decorativos */
-
 h2,
 .hero h1,
 .contador h2,
@@ -47,7 +37,6 @@ h2,
 /* =========================================
    2. CONFIGURACIÓN GENERAL
 ========================================= */
-
 html {
   margin: 0;
   min-height: 100%;
@@ -77,7 +66,6 @@ body {
 /* =========================================
    3. CONSULTA TU PASE
 ========================================= */
-
 .consulta {
   padding: 200px 5px 10px;
   text-align: center;
@@ -105,7 +93,6 @@ body {
 }
 
 /* Campo para escribir el nombre */
-
 #nombreInput {
   width: 50%;
   padding: 10px 70px;
@@ -129,7 +116,6 @@ body {
 }
 
 /* Resultado de la búsqueda */
-
 .resultado {
   margin-top: 20px;
   color: #222;
@@ -141,7 +127,6 @@ body {
 /* =========================================
    4. CONFIRMACIÓN DE ASISTENCIA
 ========================================= */
-
 .confirmar-asistencia {
   padding: 10px;
   background: transparent;
@@ -166,7 +151,6 @@ body {
 /* =========================================
    5. BOTONES DE ASISTENCIA
 ========================================= */
-
 .opciones-asistencia {
   display: flex;
   justify-content: center;
@@ -190,7 +174,6 @@ body {
 }
 
 /* Sí asistiré */
-
 .btn-asistencia[data-respuesta="Sí asistiré"] {
     padding-right: 15px;
   padding-left: 15px;
@@ -207,7 +190,6 @@ body {
 }
 
 /* No podré asistir */
-
 .btn-asistencia[data-respuesta="No podré asistir"] {
   padding-right: 15px;
   padding-left: 15px;
@@ -224,7 +206,6 @@ body {
 }
 
 /* Estado desactivado */
-
 .btn-asistencia:disabled {
   cursor: not-allowed;
   opacity: 0.6;
@@ -232,17 +213,14 @@ body {
 }
 
 /* Compatibilidad con botones de confirmación anteriores */
-
 .botones-confirmacion button.seleccionado {
   outline: 2px solid #222;
   transform: translateY(-1px);
 }
 
-
 /* =========================================
    6. FECHA LÍMITE
 ========================================= */
-
 .fecha-confirmacion {
   margin-top: 25px;
   color: #222;
@@ -256,17 +234,17 @@ body {
   font-weight: 600;
 }
 
-
 /* =========================================
    7. MENSAJE PARA LOS NOVIOS
 ========================================= */
-
 #mensajeAsistencia {
   display: block;
   max-width: 500px;
-  height: 60px; /* Aquí ajustas el alto */
+  width: 300px;
+  height: 60px;
   margin: 0 auto 20px;
-  padding: 10px 70px;
+  padding: 10px 12px;
+  box-sizing: border-box;
   border: 1px solid #d3d3d3;
   border-radius: 10px;
   outline: none;
@@ -286,13 +264,11 @@ body {
   color: #aaa;
 }
 
-
 /* =========================================
    8. BOTÓN ENVIAR
 ========================================= */
-
 #botonEnviarAsistencia {
-  padding: 8px 15px;
+  padding: 5px 15px;
   border: 2px solid #222;
   border-radius: 25px;
   background-color: #222;
@@ -320,13 +296,12 @@ body {
 /* =========================================
    9. MENSAJES DE ESTADO
 ========================================= */
-
 #estadoEnvio {
   min-height: 25px;
   margin: 10px 0 40px;
   padding: 0 15px;
   color: #555;
-  font-size: 16px;
+  font-size: 10px;
   text-align: center;
   overflow-wrap: anywhere;
 }
@@ -337,4 +312,162 @@ body {
 
 #estadoEnvio.exito {
   color: #222;
+}
+
+
+
+
+
+/* =========================================
+   10. DISEÑO RESPONSIVE - TABLETS Y MÓVILES
+========================================= */
+
+/* Tablets y pantallas medianas */
+@media screen and (max-width: 768px) {
+
+  .consulta {
+    padding: 160px 20px 10px;
+  }
+
+  .consulta .contenido {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #nombreInput {
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+  }
+
+  .confirmar-asistencia {
+    padding: 10px 20px;
+  }
+
+  .opciones-asistencia {
+    gap: 12px;
+  }
+
+  #mensajeAsistencia {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+/* =========================================
+   11. MÓVILES PEQUEÑOS
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+  .consulta {
+    padding: 130px 16px 10px;
+  }
+
+  .consulta h2,
+  .confirmar-asistencia h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .consulta .texto,
+  .confirmar-asistencia > p,
+  .fecha-confirmacion {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  #nombreInput {
+    width: 100%;
+    max-width: 340px;
+    padding: 10px 12px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+
+  .resultado {
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .confirmar-asistencia {
+    padding: 10px 14px;
+  }
+
+  .opciones-asistencia {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .btn-asistencia {
+    max-width: 100%;
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .btn-asistencia[data-respuesta="Sí asistiré"],
+  .btn-asistencia[data-respuesta="No podré asistir"] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .fecha-confirmacion {
+    margin-top: 20px;
+  }
+
+  #mensajeAsistencia {
+    width: 100%;
+    max-width: 340px;
+    min-height: 60px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  #botonEnviarAsistencia {
+    padding: 8px 18px;
+    font-size: 11px;
+  }
+
+  #estadoEnvio {
+    padding: 0 8px;
+    margin-bottom: 30px;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* =========================================
+   12. MÓVILES MUY ESTRECHOS
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+  .consulta {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .consulta h2,
+  .confirmar-asistencia h2 {
+    font-size: 28px;
+  }
+
+  .confirmar-asistencia {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .opciones-asistencia {
+    gap: 8px;
+  }
+
+  .btn-asistencia {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
 }
