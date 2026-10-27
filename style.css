@@ -424,7 +424,7 @@ body {
 
   /* Botón de envío */
   #botonEnviarAsistencia {
-    padding: 8px 18px;
+    padding: 6px 18px;
     font-size: 11px;
   }
 
@@ -433,6 +433,7 @@ body {
     padding: 0 8px;
     font-size: 10px;
     overflow-wrap: anywhere;
+    color: white;
   }
 }
 
