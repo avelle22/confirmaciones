@@ -359,15 +359,13 @@ body {
 
 /* CELULARES */
 @media screen and (max-width: 480px) {
-
-  /* Títulos decorativos */
-  .consulta h2,{
-     font-size: clamp(27px, 7.5vw, 34px);
-    line-height: 1.2;
-    margin-bottom: 14px;
-     margin-top: 10px;
+   
+.consulta {
+    padding-top: 100px;
   }
-  .confirmar-asistencia h2 {
+   
+  /* Títulos decorativos */
+  .consulta h2,.confirmar-asistencia h2 {
     font-size: clamp(27px, 7.5vw, 34px);
     line-height: 1.2;
     margin-bottom: 14px;
@@ -388,7 +386,7 @@ body {
   /* Campo del nombre */
   #nombreInput {
     width: 100%;
-    max-width: 100px;
+    max-width: 220px;
     padding: 10px 12px;
     font-size: 12px;
     box-sizing: border-box;
@@ -417,7 +415,7 @@ body {
   /* Mensaje para los novios */
   #mensajeAsistencia {
     width: 100%;
-    max-width: 300px;
+    max-width: 220px;
     height: 60px;
     padding: 10px 12px;
     font-size: 12px;
