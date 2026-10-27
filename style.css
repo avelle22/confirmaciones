@@ -415,7 +415,7 @@ body {
   /* Mensaje para los novios */
   #mensajeAsistencia {
     width: 100%;
-    max-width: 220px;
+    max-width: 150px;
     height: 60px;
     padding: 10px 12px;
     font-size: 12px;
