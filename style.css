@@ -365,7 +365,7 @@ body {
      font-size: clamp(27px, 7.5vw, 34px);
     line-height: 1.2;
     margin-bottom: 14px;
-     margin-top: 100px;
+     margin-top: 10px;
   }
   .confirmar-asistencia h2 {
     font-size: clamp(27px, 7.5vw, 34px);
@@ -388,7 +388,7 @@ body {
   /* Campo del nombre */
   #nombreInput {
     width: 100%;
-    max-width: 30px;
+    max-width: 100px;
     padding: 10px 12px;
     font-size: 12px;
     box-sizing: border-box;
@@ -445,7 +445,6 @@ body {
   .consulta h2,
   .confirmar-asistencia h2 {
     font-size: 27px;
-     padding-top: 1000px;
   }
 
   .consulta .texto,
