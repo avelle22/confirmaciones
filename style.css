@@ -361,7 +361,7 @@ body {
 @media screen and (max-width: 480px) {
    
 .consulta {
-    padding-top: 200px;
+    padding-top: 140px;
   }
    
   /* Títulos decorativos */
@@ -415,7 +415,7 @@ body {
   /* Mensaje para los novios */
   #mensajeAsistencia {
     width: 100%;
-    max-width: 150px;
+    max-width: 220px;
     height: 60px;
     padding: 10px 12px;
     font-size: 12px;
