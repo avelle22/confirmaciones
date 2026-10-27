@@ -388,7 +388,7 @@ body {
   /* Campo del nombre */
   #nombreInput {
     width: 100%;
-    max-width: 340px;
+    max-width: 30px;
     padding: 10px 12px;
     font-size: 12px;
     box-sizing: border-box;
