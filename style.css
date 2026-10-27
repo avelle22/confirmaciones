@@ -445,6 +445,7 @@ body {
   .consulta h2,
   .confirmar-asistencia h2 {
     font-size: 27px;
+     padding-top: 1000px;
   }
 
   .consulta .texto,
